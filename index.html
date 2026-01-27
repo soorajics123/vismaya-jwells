@@ -164,6 +164,73 @@ header {
 }
 
 
+@media (max-width: 900px) {
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--dark);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.show{
+        display: flex;
+    }
+
+    .nav-links li{
+        width: 100%;
+    }
+
+    .nav-links a{
+        padding: 12px;
+    }
+
+    .dropdown{
+        position: static;
+        background: #3f0304;
+    }
+
+    .nav-links li:hover > .dropdown{
+        display: none;
+    }
+
+    .nav-links li.open > .dropdown{
+        display: block;
+    }
+}
+
+/* ===== MOBILE CONTACT FIX ===== */
+@media(max-width:768px){
+    .contact-section{
+        grid-template-columns:1fr;
+        margin:40px auto;
+    }
+}
+
+/* ===== MOBILE NAV ICON GAP ===== */
+@media(max-width:900px){
+    .nav-icons{
+        gap:8px;
+    }
+}
+
+/* ===== MOBILE FORM BUTTON ===== */
+@media(max-width:600px){
+    .contact-form button{
+        width:100%;
+    }
+}
+
+
 /* =========================
    RESPONSIVE NAVBAR
 ========================= */
@@ -254,20 +321,16 @@ header {
 }
 
 /* Small Mobile */
-@media (max-width:300px){
-    .navbar{
-        padding:5px 0px;
-        padding-right: 20px;
+@media (max-width: 480px) {
+    .logo img {
+        height: 50px;
     }
 
-    .logo img{
-        height:24px;
-    }
-
-    .nav-icons i{
-        font-size:8px;
+    .search-input.active {
+        width: 120px;
     }
 }
+
 
 
 /* =========================
@@ -276,7 +339,7 @@ header {
 
 .hero-section {
    width:100%;
-   min-height: 60vh;
+    height:60vh;
     overflow:hidden;
 }
 
@@ -297,8 +360,7 @@ header {
 
 .hero-section img {
     width: 100%;
-    height: auto;
-    display:block;
+    height: 100%;
     object-fit: cover;
 }
 
